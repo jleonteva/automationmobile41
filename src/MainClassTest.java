@@ -14,4 +14,14 @@ public class MainClassTest extends MainClass
         }
 
     }
+    @Test
+    public void testGetClassNumber()
+    {
+        int b = getClassNumber(45);
+        if (b > 45) {
+            System.out.println("Проверка удачная");
+        } else {
+            System.out.println("Ошибка! Тест провален.Вернул значение" + b);
+        }
+    }
 }
