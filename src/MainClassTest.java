@@ -1,4 +1,6 @@
+import org.junit.Assert;
 import org.junit.Test;
+import java.lang.String;
 
 public class MainClassTest extends MainClass
 {
@@ -23,5 +25,20 @@ public class MainClassTest extends MainClass
         } else {
             System.out.println("Ошибка! Тест провален.Вернул значение" + b);
         }
+    }
+    @Test
+    public void testGetClassString()
+    {
+        String subStr1 = "hello";
+        String subStr2 = "Hello";
+        String str = getClassString();
+        if (str.contains(subStr1)) {
+            System.out.println("Строка" + str + "содержит подстроку" + subStr1);
+        } else if (str.contains(subStr2)) {
+            System.out.println("Строка" + str + "содержит подстроку" + subStr2);
+        } else {
+            Assert.fail("Строка" + str + "не содержит подстроку" + subStr1 + subStr2);
+        }
+
     }
 }
